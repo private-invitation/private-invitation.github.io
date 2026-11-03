@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>دعوة خاصة · حفل تتويج مهدي آل رشيد</title>
+<meta name="description" content="اكتب اسمك في الإطار الذهبي واحفظ دعوتك لحفل تتويج مهدي آل رشيد، السبت ٢٠٢٦/١١/٧، قاعة رسال.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دعوة خاصة · حفل تتويج مهدي آل رشيد">
+<meta property="og:description" content="اكتب اسمك في الإطار الذهبي واحفظ دعوتك. السبت ٢٠٢٦/١١/٧ · قاعة رسال">
+<meta property="og:image" content="https://private-invitation.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0612">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap">
+<style>
+/* Layout: one centred column; the invitation itself is the form, the guest types inside its gold frame. */
+:root{
+  --ink:#0A0612;
+  --gold:#E2C589;
+  --gold-hi:#F0DDAE;
+  --ivory:#F3EEE4;
+  --muted:#A99C86;
+  --line:rgba(226,197,137,.28);
+  --f:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--ink)}
+body{
+  margin:0;background:var(--ink);color:var(--ivory);font-family:var(--f);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-top:calc(18px + env(safe-area-inset-top,0px));
+  padding-bottom:calc(32px + env(safe-area-inset-bottom,0px));
+}
+img{max-width:100%}
+.wrap{max-width:460px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px}
+.head{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:600;font-size:15px}
+.eyebrow i{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.head p{margin:0;color:var(--muted);font-size:14px;line-height:1.6;text-wrap:balance}
+
+.card{
+  position:relative;width:min(100%, clamp(280px, calc((100svh - 230px) * .5625), 460px));
+  aspect-ratio:9/16;max-width:100%;
+  box-shadow:0 0 0 1px var(--line),0 24px 60px rgba(0,0,0,.55);
+}
+.card img{display:block;width:100%;height:100%}
+/* the frame on the invite: x 158–922, y 130–206 of 1080×1920 */
+.card input{
+  position:absolute;left:14.63%;width:70.74%;top:6.771%;height:3.958%;
+  margin:0;padding:0 2%;border:0;border-radius:0;outline:0;background:transparent;
+  font-family:var(--f);font-weight:700;color:var(--gold-hi);text-align:center;
+  text-shadow:0 1px 6px rgba(0,0,0,.7);caret-color:var(--gold);
+  -webkit-appearance:none;appearance:none;
+}
+.card input::placeholder{color:rgba(226,197,137,.6);font-weight:500}
+.card input:placeholder-shown{animation:beckon 2.6s ease-in-out infinite}
+.card input:focus{box-shadow:inset 0 0 0 1.5px rgba(240,221,174,.75);animation:none}
+@keyframes beckon{0%,100%{box-shadow:inset 0 0 0 1px rgba(226,197,137,0)}50%{box-shadow:inset 0 0 0 1.5px rgba(226,197,137,.55)}}
+@media (prefers-reduced-motion:reduce){.card input:placeholder-shown{animation:none}}
+
+.actions{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%}
+button{
+  font-family:var(--f);font-size:17px;font-weight:700;cursor:pointer;
+  border-radius:999px;padding:12px 28px;min-width:220px;border:1px solid var(--gold);
+}
+.primary{background:var(--gold);color:var(--ink)}
+.primary:hover{background:var(--gold-hi)}
+.ghost{background:transparent;color:var(--gold)}
+button:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+button[disabled]{opacity:.6;cursor:progress}
+.status{min-height:1.6em;margin:0;font-size:14px;color:var(--muted);text-align:center}
+.status.ok{color:var(--gold-hi)}
+.hint{margin:0;font-size:14px;line-height:1.6;color:var(--gold-hi);text-align:center;text-wrap:balance}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <div class="eyebrow"><i></i><span>دعوة خاصة</span><i></i></div>
+    <p id="lead">اكتب اسمك داخل الإطار الذهبي، ثم احفظ دعوتك.</p>
+  </header>
+
+  <section id="edit" class="wrap">
+    <div class="card" id="card">
+      <img id="base" src="invite-base.jpg" alt="دعوة حفل تتويج مهدي آل رشيد">
+      <input id="guest" type="text" maxlength="40" autocomplete="name" dir="auto"
+             placeholder="اكتب اسمك هنا" aria-label="اسمك كما يظهر في الدعوة">
+    </div>
+    <div class="actions">
+      <button class="primary" id="save" type="button">حفظ الدعوة</button>
+      <p class="status" id="status" role="status"></p>
+    </div>
+  </section>
+
+  <section id="result" class="wrap" hidden>
+    <div class="card"><img id="final" alt="دعوتك باسمك"></div>
+    <p class="hint">اضغط مطولاً على الدعوة واختر «حفظ الصورة».</p>
+    <div class="actions">
+      <button class="primary" id="again" type="button">حفظ الصورة</button>
+      <button class="ghost" id="back" type="button">تعديل الاسم</button>
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  // Canvas geometry of invite-base.jpg (2x of 1080x1920). The frame's centre is (1080, 336).
+  const W = 2160, H = 3840, CX = 1080, CY = 336, MAXW = 1340, FMAX = 92, FMIN = 44;
+  const FACE = "'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif";
+  const $ = (id) => document.getElementById(id);
+  const card = $('card'), input = $('guest'), base = $('base'), statusEl = $('status');
+  const measure = document.createElement('canvas').getContext('2d');
+  const touch = matchMedia('(pointer: coarse)').matches;
+
+  const clean = (s) => s.replace(/\s+/g, ' ').trim();
+  const isArabic = (s) => [...s].some(c => { const k = c.codePointAt(0); return k >= 0x600 && k <= 0x6FF; });
+  const fileName = (name) => `دعوة حفل تتويج مهدي آل رشيد - ${name.replace(/[\\/:*?"<>|]/g, '').slice(0, 40)}.jpg`;
+
+  let cache = { name: '', blob: null };
+  let lastBlob = null, lastName = '';
+
+  function fitSize(name) {
+    if (!name) return FMAX;
+    measure.font = `700 ${FMAX}px ${FACE}`;
+    const w = measure.measureText(name).width;
+    return Math.max(FMIN, Math.min(FMAX, FMAX * MAXW / w));
+  }
+
+  function layout() {
+    const scale = card.clientWidth / W;
+    if (scale > 0) input.style.fontSize = (fitSize(clean(input.value)) * scale) + 'px';
+  }
+
+  function say(text, ok) {
+    statusEl.textContent = text || '';
+    statusEl.classList.toggle('ok', !!ok);
+  }
+
+  async function compose(name) {
+    try { await document.fonts.load(`700 ${FMAX}px 'IBM Plex Sans Arabic'`, name); } catch (e) {}
+    if (!base.complete) await new Promise(r => { base.onload = r; base.onerror = r; });
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const x = c.getContext('2d');
+    x.drawImage(base, 0, 0, W, H);
+    const size = fitSize(name);
+    x.font = `700 ${size}px ${FACE}`;
+    x.direction = isArabic(name) ? 'rtl' : 'ltr';
+    x.textAlign = 'center';
+    x.textBaseline = 'alphabetic';
+    const m = x.measureText(name);
+    const asc = m.fontBoundingBoxAscent ?? size * .9, desc = m.fontBoundingBoxDescent ?? size * .35;
+    const y = CY + (asc - desc) / 2;
+    x.shadowColor = 'rgba(0,0,0,.7)'; x.shadowBlur = 16; x.shadowOffsetY = 3;
+    x.fillStyle = '#F0DDAE';
+    x.fillText(name, CX, y, MAXW);
+    return new Promise(r => c.toBlob(r, 'image/jpeg', .92));
+  }
+
+  // Phones: the share sheet (Save Image goes to Photos). Computers: a normal download.
+  async function deliver(blob, name) {
+    const file = new File([blob], fileName(name), { type: 'image/jpeg' });
+    if (touch && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file] }); return 'saved'; }
+      catch (e) { return e && e.name === 'AbortError' ? 'aborted' : 'failed'; }
+    }
+    try {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = file.name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+      return touch ? 'failed' : 'saved';
+    } catch (e) { return 'failed'; }
+  }
+
+  function showResult(blob) {
+    const fr = new FileReader();
+    fr.onload = () => {
+      $('final').src = fr.result;
+      $('edit').hidden = true;
+      $('result').hidden = false;
+      $('lead').textContent = 'هذه دعوتك باسمك.';
+      window.scrollTo({ top: 0 });
+    };
+    fr.readAsDataURL(blob);
+  }
+
+  async function blobFor(name) {
+    if (cache.name === name && cache.blob) return cache.blob;
+    const blob = await compose(name);
+    cache = { name, blob };
+    return blob;
+  }
+
+  $('save').addEventListener('click', async () => {
+    const name = clean(input.value);
+    if (!name) { say('اكتب اسمك في الإطار أولاً.'); input.focus(); return; }
+    const btn = $('save');
+    btn.disabled = true; say('جاري تجهيز الدعوة…');
+    try {
+      const blob = await blobFor(name);
+      if (!blob) throw new Error('compose');
+      lastBlob = blob; lastName = name;
+      const r = await deliver(blob, name);
+      if (r === 'saved') say('تم حفظ دعوتك.', true);
+      else if (r === 'aborted') say('');
+      else { say(''); showResult(blob); }
+    } catch (e) {
+      say('تعذر تجهيز الدعوة، حاول مرة ثانية.');
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  $('again').addEventListener('click', async () => {
+    if (lastBlob) await deliver(lastBlob, lastName);
+  });
+
+  $('back').addEventListener('click', () => {
+    $('result').hidden = true;
+    $('edit').hidden = false;
+    $('lead').textContent = 'اكتب اسمك داخل الإطار الذهبي، ثم احفظ دعوتك.';
+    layout();
+    input.focus();
+  });
+
+  // Prepare the image while the guest types, so the save button answers at once.
+  let timer = 0;
+  input.addEventListener('input', () => {
+    say('');
+    layout();
+    const v = clean(input.value);
+    if (v) document.fonts.load(`700 ${FMAX}px 'IBM Plex Sans Arabic'`, v).then(layout).catch(() => {});
+    clearTimeout(timer);
+    if (v) timer = setTimeout(() => { blobFor(v).catch(() => {}); }, 450);
+  });
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); input.blur(); $('save').click(); } });
+
+  if ('ResizeObserver' in window) new ResizeObserver(layout).observe(card);
+  window.addEventListener('resize', layout);
+  document.fonts.ready.then(layout);
+  layout();
+})();
+</script>
+</body>
+</html>
